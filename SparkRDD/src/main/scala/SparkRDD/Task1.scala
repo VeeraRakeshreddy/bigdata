@@ -25,20 +25,22 @@ object Task1 {
   
   val mapsplit = data.map(z=>z.split("\\|"))
   
-  /*val fildata = mapsplit.filter(z=>z(1).contains("70"))  
+  val fildata = mapsplit.filter(z=>z(1).contains("70"))  
 
   
   fildata.foreach(println)
 
   val strdata = fildata.map(a=>a.mkString("~"))
-  strdata.foreach(println)*/
+  strdata.foreach(println)
    val RDDschema = mapsplit.map(x=>mycolumn(x(0),x(1),x(2),x(3),x(4)))
    
   /* val fildata = RDDschema.filter(x=>x.Code.contains("I"))
    
    fildata.foreach(println)*/
    
-   //Data frame
+   //Data frame 
+   
+   ///Rakesh 
   
    
     val spark = SparkSession.builder().getOrCreate()
